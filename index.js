@@ -90,7 +90,7 @@ WinixAM90.prototype = {
         AUTO_MANUAL: 'A03',
         ROTATION_SPEED: 'A04',
         PLASMAWAVE: 'A07',
-        //AIR_QUALITY: 'S07'
+        AIR_QUALITY: 'S07'
     },
 
     init () {
@@ -150,7 +150,7 @@ WinixAM90.prototype = {
         }
 
         this.getStatusFromServer(this.serverStatuses.POWER)
-            .then((status) => status ? Characteristic.CurrentAirPurifierState.PURIFYING_AIR : Characteristic.CurrentAirPurifierState.INACTIVE)
+            .then((status) => status === 1 ? Characteristic.CurrentAirPurifierState.PURIFYING_AIR : Characteristic.CurrentAirPurifierState.INACTIVE)
             .then((status) => callback(null, status));
     },
 
