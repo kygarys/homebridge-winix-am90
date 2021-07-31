@@ -6,15 +6,15 @@ module.exports = function (homebridge) {
     Service = homebridge.hap.Service;
     Characteristic = homebridge.hap.Characteristic;
 
-    homebridge.registerAccessory('homebridge-winix-c545', 'WinixC545', WinixC545);
+    homebridge.registerAccessory('homebridge-winix-c545', 'WinixAM90', WinixAM90);
 }
 
-function WinixC545(log, config) {
+function WinixAM90(log, config) {
     this.log = log;
     this.name = config.name || 'Air Purifier';
     this.deviceId = config.deviceId;
 
-    this.apiServer = `https://us.api.winix-iot.com/common/control/devices/${this.deviceId}/A211`;
+    this.apiServer = `https://us.api.winix-iot.com/common/control/devices/${this.deviceId}`;
     this.deviceStatusServer = `https://us.api.winix-iot.com/common/event/sttus/devices/${this.deviceId}`;
 
     this.showAirQuality = config.showAirQuality || false;
@@ -66,7 +66,7 @@ function WinixC545(log, config) {
 
     this.serviceInfo
         .setCharacteristic(Characteristic.Manufacturer, 'Winix')
-        .setCharacteristic(Characteristic.Model, 'C545');
+        .setCharacteristic(Characteristic.Model, 'AM90');
 
     this.services.push(this.service);
     this.services.push(this.serviceInfo);
@@ -84,7 +84,7 @@ function WinixC545(log, config) {
     this.init();
 }
 
-WinixC545.prototype = {
+WinixAM90.prototype = {
     serverStatuses: {
         POWER: 'A02',
         AUTO_MANUAL: 'A03',
