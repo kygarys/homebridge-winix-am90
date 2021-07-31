@@ -6,7 +6,7 @@ module.exports = function (homebridge) {
     Service = homebridge.hap.Service;
     Characteristic = homebridge.hap.Characteristic;
 
-    homebridge.registerAccessory('homebridge-winix-c545', 'WinixAM90', WinixAM90);
+    homebridge.registerAccessory('homebridge-winix-am90', 'WinixAM90', WinixAM90);
 }
 
 function WinixAM90(log, config) {
