@@ -1,16 +1,16 @@
 {
-  "name": "homebridge-winix-c545",
+  "name": "homebridge-winix-am90",
   "version": "0.0.1",
-  "description": "Winix C545 purifier plugin for Homebridge.",
+  "description": "Winix AM90 purifier plugin for Homebridge.",
   "license": "MIT",
   "keywords": [
     "homebridge-plugin",
     "winix",
-    "winix c545"
+    "winix am90"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/banzalik/homebridge-winix-c545.git"
+    "url": "https://github.com/kygarys/homebridge-winix-am90.git"
   },
   "engines": {
     "node": ">=0.12.0",
