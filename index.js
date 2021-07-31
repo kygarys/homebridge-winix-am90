@@ -14,7 +14,7 @@ function WinixAM90(log, config) {
     this.name = config.name || 'Air Purifier';
     this.deviceId = config.deviceId;
 
-    this.apiServer = `https://us.api.winix-iot.com/common/control/devices/${this.deviceId}`;
+    this.apiServer = `https://us.api.winix-iot.com/common/control/devices/${this.deviceId}/A211`;
     this.deviceStatusServer = `https://us.api.winix-iot.com/common/event/sttus/devices/${this.deviceId}`;
 
     this.showAirQuality = config.showAirQuality || false;
@@ -90,7 +90,7 @@ WinixAM90.prototype = {
         AUTO_MANUAL: 'A03',
         ROTATION_SPEED: 'A04',
         PLASMAWAVE: 'A07',
-        AIR_QUALITY: 'S07'
+        //AIR_QUALITY: 'S07'
     },
 
     init () {
