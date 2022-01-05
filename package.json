@@ -1,6 +1,5 @@
 {
   "name": "homebridge-winix-am90",
-  "addCustomCharacteristics": false,
   "version": "0.0.1",
   "description": "Winix AM90 purifier plugin for Homebridge.",
   "license": "MIT",
