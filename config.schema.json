@@ -33,6 +33,7 @@
       }
     }
   },
+  "addCustomCharacteristics": false,
   "form": null,
   "display": null
 }
